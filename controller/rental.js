@@ -1,0 +1,1 @@
+const Rental=require('../model/Rental')
