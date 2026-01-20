@@ -1,11 +1,8 @@
 const mongoose=require ('mongoose')
 
 const rentalsSchema= new mongoose.Schema({
-    rental_id:{
-        type:String,
-        required:true
-    },
-        user_id:{
+  
+     user_id:{
         type:mongoose.Types.ObjectId,
         required:true
     },

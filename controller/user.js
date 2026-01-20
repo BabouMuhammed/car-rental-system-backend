@@ -12,14 +12,14 @@ const registerUser= async (req,res)=>{
         })
         
         if (userExist){
-            return res.status(500).json(
+            return res.status(400).json(
                 {
                     message: "there is already a user with this email"
                 }
             )
         }
         if(!password){
-            return res.status(500).json(
+            return res.status(400).json(
                 {
                     message: "password cannot be empty"
                 }
