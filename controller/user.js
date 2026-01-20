@@ -6,7 +6,7 @@ const {generateToken}=require('../Utils/jwtService')
 const registerUser= async (req,res)=>{
     try{
         const email=req.body.email
-        const password=req.body.passsword
+        const password=req.body.password
         const userExist =await User.findOne({
             email:email
         })
