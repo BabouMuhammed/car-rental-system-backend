@@ -15,7 +15,7 @@ const rentalsSchema= new mongoose.Schema({
         required:true
     },
         end_date:{
-        type:number,
+        type:Number,
         required:true
     },
     total_price:{
@@ -36,5 +36,5 @@ const rentalsSchema= new mongoose.Schema({
     },
 })
 
-const Rental=mongoose.model('Rental'.rentalsSchema)
+const Rental=mongoose.model('Rental',rentalsSchema)
 module.exports=Rental

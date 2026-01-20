@@ -1,6 +1,6 @@
 const express=require('express')
 const router=express.Router()
-const {createRental,getAllRentals,getRentalById,updateRental,deleteRental}=require('../controller/rental')
+const {createRental,getAllRentals,getRentalById,getRentalByUserId,acceptRental,rejectRental}=require('../controller/rental')
 const authMiddleWare=require('../middleware/authMiddleWare')
 router.post('/',authMiddleWare,createRental)
 router.get('/',getAllRentals)

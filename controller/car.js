@@ -1,6 +1,5 @@
 const Car=require('../model/Cars')
-import { uploadToCloudinary } from '../Utils/cloudinaryUploader.js'
-
+const {uploadToCloudinary}=require('../utils/cloudinaryUploader')
 const createCar= async (req,res)=> {
     try{
         const file=req.file
