@@ -58,7 +58,7 @@ const loginUser= async (req,res)=>{
         )}
         const passwordMatches=await bcrypt.compare(password,userExist.passsword)
         if(!passwordMatches){
-            res.status(400).json(
+           return res.status(400).json(
                 {
                     message:"invalid credentails"
                 }
@@ -66,7 +66,7 @@ const loginUser= async (req,res)=>{
         }
         const token=await generateToken(email)
 
-        res.status(200).json(
+        return res.status(200).json(
             {
                 message:"login successful",
                 token:token
@@ -75,6 +75,10 @@ const loginUser= async (req,res)=>{
             
     
     }catch(error){
+        return res.status(500).json({
+            message: "login failed",
+            error: error.message
+        })
 
     }
 }
