@@ -1,4 +1,5 @@
 const express=require('express')
+const cors=require('cors')
 const carRoutes=require('./routes/car')
 const userRoutes=require('./routes/user')
 const bookingRoutes=require('./routes/rental')
@@ -10,7 +11,7 @@ const PORT=process.env.PORT || 5000
 // Connect to MongoDB
 connectDB();
 
-app.use(cosrs())
+app.use(cors())
 app.use(express.json())
 app.use('/api/cars',carRoutes)
 app.use('/api/users',userRoutes)
